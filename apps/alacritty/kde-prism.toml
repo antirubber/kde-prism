@@ -1,0 +1,80 @@
+# KDE Prism theme for Alacritty
+# Place at ~/.config/alacritty/themes/kde-prism.toml
+# Or import from alacritty.toml: import = ["~/.config/alacritty/themes/kde-prism.toml"]
+
+[colors.primary]
+background = "#000000"
+foreground = "#BDA7F0"
+
+[colors.normal]
+black = "#000000"
+red = "#FF7447"
+green = "#7EC9A0"
+yellow = "#FFCC66"
+blue = "#A8C4FF"
+magenta = "#BDA7F0"
+cyan = "#89DDFF"
+white = "#E3D9FF"
+
+[colors.bright]
+black = "#555555"
+red = "#FF8F6B"
+green = "#A0DBB8"
+yellow = "#FFD999"
+blue = "#C0D4FF"
+magenta = "#CAB8F5"
+cyan = "#B0E8FF"
+white = "#F5F0FF"
+
+[colors.cursor]
+cursor = "#FF7447"
+text = "#000000"
+
+[colors.selection]
+background = "#BDA7F0"
+foreground = "#000000"
+
+[colors.vi_mode_cursor]
+cursor = "#FF7447"
+text = "#000000"
+
+[colors.search.matches]
+background = "#BDA7F0"
+foreground = "#000000"
+
+[colors.search.focused_match]
+background = "#FF7447"
+foreground = "#000000"
+
+[colors.line_indicator]
+foreground = "#BDA7F0"
+background = "#191919"
+
+[colors.footer_bar]
+background = "#191919"
+foreground = "#BDA7F0"
+
+[hints]
+[hints.enabled]
+[hints.enabled.command]
+program = "xdg-open"
+
+[hints.enabled.mouse]
+enabled = true
+
+[hints.enabled.binding]
+key = "U"
+mods = "Control|Shift"
+
+[hints.enabled.regex]
+alphabet = "jfkdls;ahgurieowpnvbc"
+
+[font]
+normal = { family = "DM Mono", style = "Regular" }
+bold = { family = "DM Mono", style = "Medium" }
+italic = { family = "DM Mono", style = "Italic" }
+bold_italic = { family = "DM Mono", style = "Medium Italic" }
+size = 11
+
+[window]
+opacity = 0.95

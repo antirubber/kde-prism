@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE colormap>
+<colormap version="1.0">
+  <general>
+    <name>kde-prism</name>
+    <author>kde-prism contributors</author>
+    <description>Dark high-contrast theme with lavender accent and orange highlight</description>
+    <license>MIT</license>
+    <version>1.0</version>
+  </general>
+  <styles>
+    <style name="Normal Text"          foreground="#BDA7F0" background="#000000" bold="0" italic="0" />
+    <style name="Keyword"              foreground="#FF7447" background="#000000" bold="1" italic="0" />
+    <style name="Data Type"             foreground="#FF7447" background="#000000" bold="1" italic="0" />
+    <style name="Control Keyword"       foreground="#FF7447" background="#000000" bold="1" italic="0" />
+    <style name="Function"              foreground="#FF7447" background="#000000" bold="1" italic="0" />
+    <style name="Built-in"              foreground="#89DDFF" background="#000000" bold="1" italic="0" />
+    <style name="Variable"              foreground="#BDA7F0" background="#000000" bold="0" italic="0" />
+    <style name="Constant"              foreground="#A8C4FF" background="#000000" bold="0" italic="0" />
+    <style name="Character"             foreground="#7EC9A0" background="#000000" bold="0" italic="0" />
+    <style name="String"                foreground="#7EC9A0" background="#000000" bold="0" italic="0" />
+    <style name="Preprocessor"           foreground="#FFCC66" background="#000000" bold="0" italic="0" />
+    <style name="Prep. Lib"             foreground="#FFCC66" background="#000000" bold="0" italic="0" />
+    <style name="Comment"               foreground="#8D7FBA" background="#000000" bold="0" italic="1" />
+    <style name="Line Number"            foreground="#8D7FBA" background="#000000" bold="0" italic="0" />
+    <style name="Current Line Number"    foreground="#FF7447" background="#000000" bold="1" italic="0" />
+    <style name="Number"                 foreground="#A8C4FF" background="#000000" bold="0" italic="0" />
+    <style name="Float"                 foreground="#A8C4FF" background="#000000" bold="0" italic="0" />
+    <style name="Decimal/Hex/Octal"      foreground="#A8C4FF" background="#000000" bold="0" italic="0" />
+    <style name="Operator"              foreground="#BDA7F0" background="#000000" bold="0" italic="0" />
+    <style name="Identifier"            foreground="#BDA7F0" background="#000000" bold="0" italic="0" />
+    <style name="Alert"                  foreground="#FF7447" background="#000000" bold="1" italic="0" />
+    <style name="Information"            foreground="#FFCC66" background="#000000" bold="0" italic="0" />
+    <style name="Warning"               foreground="#FF7447" background="#000000" bold="1" italic="0" />
+    <style name="Error"                  foreground="#FF7447" background="#191919" bold="1" italic="0" />
+    <style name="Annotation"            foreground="#89DDFF" background="#000000" bold="0" italic="0" />
+    <style name="Region Marker"         foreground="#89DDFF" background="#191919" bold="0" italic="0" />
+    <style name="Documentation"          foreground="#7EC9A0" background="#000000" bold="0" italic="1" />
+    <style name="Documentation Comment"  foreground="#8D7FBA" background="#000000" bold="0" italic="1" />
+    <style name="Attribute"             foreground="#89DDFF" background="#000000" bold="0" italic="0" />
+    <style name="Special String"         foreground="#A8C4FF" background="#000000" bold="0" italic="0" />
+    <style name="Regular Expression"     foreground="#89DDFF" background="#000000" bold="0" italic="0" />
+    <style name="Symbol"                 foreground="#BDA7F0" background="#000000" bold="0" italic="0" />
+    <style name="Symbol Bracket"         foreground="#BDA7F0" background="#000000" bold="0" italic="0" />
+    <style name="Text Scope"             foreground="#8D7FBA" background="#000000" bold="0" italic="0" />
+    <style name="Markdown Header"        foreground="#FF7447" background="#000000" bold="1" italic="0" />
+    <style name="Markdown Emphasis"       foreground="#BDA7F0" background="#000000" bold="0" italic="1" />
+    <style name="Markdown Link"          foreground="#FF7447" background="#000000" bold="0" italic="0" />
+    <style name="Markdown Code"          foreground="#7EC9A0" background="#000000" bold="0" italic="0" />
+    <style name="Selection"              foreground="#000000" background="#BDA7F0" bold="0" italic="0" />
+    <style name="Search"                 foreground="#000000" background="#FF7447" bold="0" italic="0" />
+    <style name="Replace Highlight"      foreground="#000000" background="#BDA7F0" bold="0" italic="0" />
+  </styles>
+</colormap>

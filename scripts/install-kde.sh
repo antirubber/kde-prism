@@ -294,6 +294,69 @@ if [[ -f "${KONSOLE_SRC}" ]]; then
 fi
 
 # ******************************************************************************
+# 7b. Konsole Profile
+# ******************************************************************************
+KONSOLE_PROFILE_SRC="${REPO_ROOT}/apps/konsole/KDEPrism.profile"
+KONSOLE_PROFILE_DEST="${PREFIX}/.local/share/konsole/KDEPrism.profile"
+if [[ -f "${KONSOLE_PROFILE_SRC}" ]]; then
+  echo
+  echo "=== KONSOLE PROFILE ==="
+  mkdir -p "$(dirname "${KONSOLE_PROFILE_DEST}")"
+  cp -f "${KONSOLE_PROFILE_SRC}" "${KONSOLE_PROFILE_DEST}"
+  echo "Installed Konsole profile to ${KONSOLE_PROFILE_DEST}"
+fi
+
+# ******************************************************************************
+# 7c. Alacritty Color Theme
+# ******************************************************************************
+ALACRITTY_SRC="${REPO_ROOT}/apps/alacritty/kde-prism.toml"
+ALACRITTY_DEST="${PREFIX}/.config/alacritty/themes/kde-prism.toml"
+if [[ -f "${ALACRITTY_SRC}" ]]; then
+  echo
+  echo "=== ALACRITTY COLOR THEME ==="
+  mkdir -p "$(dirname "${ALACRITTY_DEST}")"
+  cp -f "${ALACRITTY_SRC}" "${ALACRITTY_DEST}"
+  echo "Installed Alacritty theme to ${ALACRITTY_DEST}"
+  if [[ ! -f "${PREFIX}/.config/alacritty/alacritty.toml" ]]; then
+    mkdir -p "${PREFIX}/.config/alacritty"
+    cat > "${PREFIX}/.config/alacritty/alacritty.toml" <<'ALACRITTY_EOF'
+import = ["~/.config/alacritty/themes/kde-prism.toml"]
+ALACRITTY_EOF
+    echo "Created minimal alacritty.toml with theme import"
+  fi
+fi
+
+# ******************************************************************************
+# 7d. Kitty Color Theme
+# ******************************************************************************
+KITTY_SRC="${REPO_ROOT}/apps/kitty/kde-prism.conf"
+KITTY_DEST="${PREFIX}/.config/kitty/themes/kde-prism.conf"
+if [[ -f "${KITTY_SRC}" ]]; then
+  echo
+  echo "=== KITTY COLOR THEME ==="
+  mkdir -p "$(dirname "${KITTY_DEST}")"
+  cp -f "${KITTY_SRC}" "${KITTY_DEST}"
+  echo "Installed Kitty theme to ${KITTY_DEST}"
+  if [[ -f "${PREFIX}/.config/kitty/kitty.conf" ]]; then
+    echo "To enable in Kitty, add to kitty.conf:"
+    echo "  include themes/kde-prism.conf"
+  fi
+fi
+
+# ******************************************************************************
+# 7e. Kate Color Scheme
+# ******************************************************************************
+KATE_SRC="${REPO_ROOT}/apps/kate/kde-prism.xml"
+KATE_DEST="${PREFIX}/.local/share/katecolor-schemes/kde-prism.xml"
+if [[ -f "${KATE_SRC}" ]]; then
+  echo
+  echo "=== KATE COLOR SCHEME ==="
+  mkdir -p "$(dirname "${KATE_DEST}")"
+  cp -f "${KATE_SRC}" "${KATE_DEST}"
+  echo "Installed Kate color scheme to ${KATE_DEST}"
+fi
+
+# ******************************************************************************
 # 8. KDE Font Configuration
 # ******************************************************************************
 if [[ "${PREFIX}" == "${HOME}" ]] && [[ -n "${kwriteconfig_cmd}" ]]; then
@@ -553,6 +616,9 @@ What was applied:
   - Icon theme:           ${GNOME_THEME_NAME}
   - GTK theme:            ${GNOME_THEME_NAME} (for GTK apps under KDE)
   - Konsole scheme:       ${COLORSCHEME_NAME}
+  - Alacritty theme:      kde-prism
+  - Kitty theme:          kde-prism
+  - Kate color scheme:     kde-prism
   - Wallpaper and fonts
 
 To apply all changes immediately, restart plasmashell:

@@ -17,6 +17,10 @@ Adapted from [gnome-prism](https://github.com/zachfeldman/gnome-prism) by Zach F
 | Plasma color scheme | `themes/kde-prism/plasma-colors/KDEPrism.colors` | System-wide KDE color palette |
 | Plasma desktop theme | `themes/kde-prism/plasma-theme/` | Plasma shell theme (metadata.json + colors, Plasma 6 format) |
 | Konsole color scheme | `themes/kde-prism/konsole/KDEPrism.colorscheme` | Terminal emulator palette |
+| Konsole profile | `apps/konsole/KDEPrism.profile` | Konsole profile with font + theme |
+| Alacritty theme | `apps/alacritty/kde-prism.toml` | Terminal emulator theme |
+| Kitty theme | `apps/kitty/kde-prism.conf` | Terminal emulator theme |
+| Kate color scheme | `apps/kate/kde-prism.xml` | KDE advanced text editor theme |
 | GTK theme | `themes/kde-prism/` (gtk-3.0, gtk-4.0) | GTK 3/4 theme for GTK apps under KDE |
 | Icon theme | `themes/kde-prism/icons/gnome-prism/` | 100+ app + status icons (inherits Breeze) |
 | Wallpaper | `assets/backgrounds/` | Default background |
@@ -24,6 +28,7 @@ Adapted from [gnome-prism](https://github.com/zachfeldman/gnome-prism) by Zach F
 | Firefox theme add-on | `apps/firefox/gnome-prism-theme/` | Firefox theme manifest |
 | Vivaldi CSS mod | `apps/vivaldi/mods/custom.css` | Browser UI overrides |
 | Cursor/VS Code settings | `apps/cursor/gnome-prism-settings.json` | Editor color theme |
+| VS Code color theme | `apps/vscode/gnome-prism-color-theme.json` | VS Code standalone theme |
 | Tilix color scheme | `apps/tilix/gnome-prism.json` | Terminal palette (design tokens reference) |
 
 ## Install
@@ -96,10 +101,39 @@ The install script automatically applies `apps/cursor/gnome-prism-settings.json`
 
 ### Konsole
 
-The install script copies the color scheme. To use it:
+The install script copies the color scheme and profile. To use it:
 
 1. Open Konsole → Settings → Edit Current Profile → Appearance
 2. Select **KDE Prism** from the color scheme list
+
+Or switch to the KDE Prism profile directly:
+
+1. Open Konsole → Settings → Switch Profile → **KDE Prism**
+
+### Alacritty
+
+The install script copies the theme to `~/.config/alacritty/themes/kde-prism.toml`. If no `alacritty.toml` exists, it creates one with the theme import. For existing configs, add:
+
+```toml
+import = ["~/.config/alacritty/themes/kde-prism.toml"]
+```
+
+### Kitty
+
+The install script copies the theme to `~/.config/kitty/themes/kde-prism.conf`. To enable:
+
+```bash
+echo 'include themes/kde-prism.conf' >> ~/.config/kitty/kitty.conf
+```
+
+Or in Kitty's terminal: `kitty +kitten themes kde-prism`
+
+### Kate
+
+The install script copies the color scheme to `~/.local/share/katecolor-schemes/kde-prism.xml`. To use it:
+
+1. Open Kate → Settings → Configure Kate → Fonts & Colors
+2. Select **kde-prism** from the scheme list
 
 ## Plasma 6 Compatibility
 
