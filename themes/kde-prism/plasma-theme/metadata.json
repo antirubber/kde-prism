@@ -1,0 +1,18 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "kde-prism contributors"
+            }
+        ],
+        "Id": "kde-prism",
+        "Name": "KDE Prism",
+        "Description": "A dark, high-contrast Plasma theme with lavender and orange accents",
+        "Version": "1.0",
+        "EnabledByDefault": true,
+        "License": "MIT",
+        "Website": ""
+    },
+    "KPackageStructure": "Plasma/DesktopTheme",
+    "X-Plasma-API": "5.0"
+}
